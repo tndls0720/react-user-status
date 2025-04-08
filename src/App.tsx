@@ -10,9 +10,11 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <MyButton onClick={toggleStatus} />
-      <UserStatus isOnline={isUserOnline} />
+      <div className="status-card">
+        <UserStatus isOnline={isUserOnline} />
+      </div>
     </div>
   );
 }
