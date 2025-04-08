@@ -13,3 +13,10 @@
 .offline {
     background-color: #f87171;
 }
+
+@media (max-width: 768px) {
+    .status-container {
+      flex-direction: column;
+    }
+  }
+  
