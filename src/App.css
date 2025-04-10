@@ -1,61 +1,40 @@
-/* App.css */
+.app-container {
+  padding: 40px;
+  font-family: "Pretendard", sans-serif;
+  text-align: center;
+  background-color: #fffdf7;
+  color: #333;
+}
 
-body {
-    font-family: 'Pretendard', sans-serif;
-    background-color: #f9fafb;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .app-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    gap: 20px;
-  }
-  
-  .status-card {
-    background-color: #fff;
-    border: 1px solid #e5e7eb;
-    padding: 20px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-    font-size: 1.1rem;
-    color: #374151;
-    display: flex;
-    align-items: center;
-  }
-  
-  .status-dot {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .online {
-    background-color: #34d399; /* 초록색 */
-  }
-  
-  .offline {
-    background-color: #f87171; /* 빨간색 */
-  }
-  
-  /* 버튼이 MyButton.css에 있다면 무시, 아니면 아래도 추가 */
-  button {
-    padding: 10px 20px;
-    border-radius: 8px;
-    background-color: #3b82f6;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  button:hover {
-    background-color: #2563eb;
-  }
-  
+.menu-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.menu-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.menu-item button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-item button:hover {
+  background: #4338ca;
+}
+
+.cart {
+  margin-top: 40px;
+}
