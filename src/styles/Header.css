@@ -1,0 +1,27 @@
+header {
+  background-color: #fff8f0;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #e0cfc2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cafe24Oneprettynight", sans-serif;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #6b4226;
+  margin: 0;
+}
+
+header nav a {
+  font-size: 1.1rem;
+  color: #6b4226;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #a86b4d;
+}
