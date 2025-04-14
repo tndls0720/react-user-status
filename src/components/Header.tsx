@@ -1,7 +1,9 @@
+import "../styles/Header.css";
+
 function Header() {
   return (
     <header>
-      <h1>My Cafe</h1>
+      <h1>Cafe Lucy</h1>
       <nav>
         <a href="/">홈</a>
       </nav>
