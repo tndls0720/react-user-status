@@ -3,10 +3,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Mainpage from "./page/MainPage";
 import Header from "./components/Header";
 import CartPage from "./page/CartPage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [cart, setCart] = useState<string[]>([]);
+  const [cart, setCart] = useState<string[]>(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
   return (
     <BrowserRouter>
       <Header />
