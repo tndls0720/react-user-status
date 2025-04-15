@@ -1,9 +1,11 @@
 import MenuItem from "../components/MenuItem";
-import { useState } from "react";
 
-function Mainpage() {
-  const [cart, setCart] = useState<string[]>([]);
+interface MainPageProps {
+  cart: string[];
+  setCart: React.Dispatch<React.SetStateAction<string[]>>;
+}
 
+function Mainpage({ cart, setCart }: MainPageProps) {
   const handleOrder = (menuName: string) => {
     setCart((prev) => [...prev, menuName]);
   };
