@@ -41,7 +41,7 @@ function Mainpage({ cart, setCart }: MainPageProps) {
         onOrder={() => handleOrder("바닐라라떼")}
       />
       <button onClick={handlePurchase} style={{ marginTop: "20px" }}>
-        구매하기
+        주문하기
       </button>
     </div>
   );
