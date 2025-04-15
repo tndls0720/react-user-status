@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import MenuItem from "../components/MenuItem";
 
 interface MainPageProps {
@@ -6,8 +7,19 @@ interface MainPageProps {
 }
 
 function Mainpage({ cart, setCart }: MainPageProps) {
+  const navigate = useNavigate();
+
   const handleOrder = (menuName: string) => {
     setCart((prev) => [...prev, menuName]);
+    alert(`${menuName}가 장바구니에 담겼습니다!`);
+  };
+
+  const handlePurchase = () => {
+    if (cart.length === 0) {
+      alert("장바구니가 비었습니다.");
+      return;
+    }
+    navigate("/cart");
   };
 
   return (
@@ -28,19 +40,9 @@ function Mainpage({ cart, setCart }: MainPageProps) {
         price={4000}
         onOrder={() => handleOrder("바닐라라떼")}
       />
-
-      <div className="cart">
-        <h2>🛒 장바구니</h2>
-        {cart.length === 0 ? (
-          <p>주문한 메뉴가 없습니다.</p>
-        ) : (
-          <ul>
-            {cart.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        )}
-      </div>
+      <button onClick={handlePurchase} style={{ marginTop: "20px" }}>
+        구매하기
+      </button>
     </div>
   );
 }
