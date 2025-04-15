@@ -1,27 +1,62 @@
+/* styles/Header.css */
+
 header {
-  background-color: #fff8f0;
-  padding: 1rem 2rem;
-  border-bottom: 2px solid #e0cfc2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Cafe24Oneprettynight", sans-serif;
+  background-color: #fff8f0;
+  padding: 16px 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header h1 {
-  font-size: 2rem;
-  color: #6b4226;
-  margin: 0;
+  font-family: "Stylish", sans-serif;
+  font-size: 28px;
+  color: #6b4c3b;
+  cursor: pointer;
 }
 
-header nav a {
-  font-size: 1.1rem;
-  color: #6b4226;
+nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* 홈 링크 스타일 */
+nav a {
   text-decoration: none;
-  margin-left: 1.5rem;
-  transition: color 0.3s ease;
+  color: #6b4c3b;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 2px solid #d5b89e;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
 
-header nav a:hover {
-  color: #a86b4d;
+nav a:hover {
+  background-color: #ffe8d6;
+  color: #3d2c1e;
+  border-color: #c5a68d;
+}
+
+/* 장바구니 버튼 스타일 */
+nav button {
+  background-color: #d5b89e;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #c5a68d;
 }
